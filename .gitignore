@@ -1,0 +1,57 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# MemoryCaptures can get excessive in size
+[Mm]emoryCaptures/
+
+# Auto generated Visual Studio files
+.vs/
+.vscode/
+
+# Gradle files
+.gradle/
+*.iml
+
+# MacOS specific files
+.DS_Store
+._*
+
+# Thumbnails
+._*
+
+# Android build output
+*.apk
+*.aab
+/*.apk.keystore
+
+# iOS build output
+*.ipa
+*.xcarchive
+/*.xcodeproj
+/*.xcworkspace
+/*.pbxproj
+/*.mode1v3
+/*.mode2v3
+/*.perspectivev3
+/*.xcuserstate
+
+# Windows build output
+*.exe
+*.pdb
+*.dll
+*.buildvms
+
+# Android Studio generated files
+/*/captures/
+
+# Gradle wrapper files
+!gradle-wrapper.jar
+
+# External dependency folders
+Packages/
