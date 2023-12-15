@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
 
-    private float speed = 7.0f;
+    public float speed = 15.0f;
     private float screenWidth;
 
     // Start is called before the first frame update

@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1721480293439222415}
   - component: {fileID: 3471770176598474810}
   m_Layer: 0
-  m_Name: apple
-  m_TagString: apple
+  m_Name: grape
+  m_TagString: grape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3e0cdceb44f4c4361b056fab169932ad, type: 2}
+  - {fileID: 2100000, guid: 8ae7fd220c9d34f30ad1792e44868b73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
