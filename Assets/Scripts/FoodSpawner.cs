@@ -9,13 +9,14 @@ public class FoodSpawner : MonoBehaviour
     public float spawnInterval = 3f; // Time between spawns
     public float spawnOffset = 1f; // Offset value for spawning higher
     public float farEdgeSpawnChance = 0.1f; // Chance to spawn at far left or far right
+    public float fallingSpeed = 5f; // Speed at which the objects fall
     private float cameraTop; // Top of the camera's view in world coordinates
     private float cameraRightEdge; // Right edge of the camera's view in world coordinates
     private float cameraLeftEdge; // Left edge of the camera's view in world coordinates
 
     void Start()
     {
-        // Check if the objectsToSpawn array is empty
+        // Check if the foods array is empty
         if (foods.Length == 0)
         {
             Debug.LogError("No objects assigned to spawn!");
@@ -35,7 +36,7 @@ public class FoodSpawner : MonoBehaviour
 
     void SpawnObject()
     {
-        // Check if the objectsToSpawn array is empty or null
+        // Check if the foods array is empty or null
         if (foods == null || foods.Length == 0)
         {
             Debug.LogError("No objects assigned to spawn!");
@@ -68,7 +69,14 @@ public class FoodSpawner : MonoBehaviour
         GameObject objectToSpawn = foods[Random.Range(0, foods.Length)];
 
         // Instantiate the selected object at the calculated position
-        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+        GameObject spawnedObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+
+        // Change falling speed by adjusting Rigidbody's velocity
+        Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.down * fallingSpeed; // Set falling speed by modifying the velocity
+        }
     }
 
 }
